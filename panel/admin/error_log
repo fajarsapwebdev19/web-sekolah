@@ -1,0 +1,42 @@
+[30-Nov-2022 20:37:11 Asia/Jakarta] PHP Notice:  Undefined index: login_status in /home/kord6695/public_html/panel/admin/index.php on line 9
+[30-Nov-2022 20:37:11 Asia/Jakarta] PHP Notice:  Undefined variable: data_user in /home/kord6695/public_html/panel/admin/template/sidebar.php on line 14
+[30-Nov-2022 20:37:11 Asia/Jakarta] PHP Notice:  Trying to get property 'jk' of non-object in /home/kord6695/public_html/panel/admin/template/sidebar.php on line 14
+[30-Nov-2022 20:37:11 Asia/Jakarta] PHP Notice:  Undefined variable: data_user in /home/kord6695/public_html/panel/admin/template/sidebar.php on line 18
+[30-Nov-2022 20:37:11 Asia/Jakarta] PHP Notice:  Trying to get property 'jk' of non-object in /home/kord6695/public_html/panel/admin/template/sidebar.php on line 18
+[30-Nov-2022 20:37:11 Asia/Jakarta] PHP Notice:  Undefined variable: data_user in /home/kord6695/public_html/panel/admin/template/sidebar.php on line 26
+[30-Nov-2022 20:37:11 Asia/Jakarta] PHP Notice:  Trying to get property 'nama' of non-object in /home/kord6695/public_html/panel/admin/template/sidebar.php on line 26
+[30-Nov-2022 20:37:12 Asia/Jakarta] PHP Notice:  Undefined index: login_status in /home/kord6695/public_html/panel/admin/index.php on line 9
+[30-Nov-2022 20:37:12 Asia/Jakarta] PHP Notice:  Undefined variable: data_user in /home/kord6695/public_html/panel/admin/template/sidebar.php on line 14
+[30-Nov-2022 20:37:12 Asia/Jakarta] PHP Notice:  Trying to get property 'jk' of non-object in /home/kord6695/public_html/panel/admin/template/sidebar.php on line 14
+[30-Nov-2022 20:37:12 Asia/Jakarta] PHP Notice:  Undefined variable: data_user in /home/kord6695/public_html/panel/admin/template/sidebar.php on line 18
+[30-Nov-2022 20:37:12 Asia/Jakarta] PHP Notice:  Trying to get property 'jk' of non-object in /home/kord6695/public_html/panel/admin/template/sidebar.php on line 18
+[30-Nov-2022 20:37:12 Asia/Jakarta] PHP Notice:  Undefined variable: data_user in /home/kord6695/public_html/panel/admin/template/sidebar.php on line 26
+[30-Nov-2022 20:37:12 Asia/Jakarta] PHP Notice:  Trying to get property 'nama' of non-object in /home/kord6695/public_html/panel/admin/template/sidebar.php on line 26
+[30-Nov-2022 20:37:13 Asia/Jakarta] PHP Notice:  Undefined index: login_status in /home/kord6695/public_html/panel/admin/index.php on line 9
+[30-Nov-2022 20:37:13 Asia/Jakarta] PHP Notice:  Undefined variable: data_user in /home/kord6695/public_html/panel/admin/template/sidebar.php on line 14
+[30-Nov-2022 20:37:13 Asia/Jakarta] PHP Notice:  Trying to get property 'jk' of non-object in /home/kord6695/public_html/panel/admin/template/sidebar.php on line 14
+[30-Nov-2022 20:37:13 Asia/Jakarta] PHP Notice:  Undefined variable: data_user in /home/kord6695/public_html/panel/admin/template/sidebar.php on line 18
+[30-Nov-2022 20:37:13 Asia/Jakarta] PHP Notice:  Trying to get property 'jk' of non-object in /home/kord6695/public_html/panel/admin/template/sidebar.php on line 18
+[30-Nov-2022 20:37:13 Asia/Jakarta] PHP Notice:  Undefined variable: data_user in /home/kord6695/public_html/panel/admin/template/sidebar.php on line 26
+[30-Nov-2022 20:37:13 Asia/Jakarta] PHP Notice:  Trying to get property 'nama' of non-object in /home/kord6695/public_html/panel/admin/template/sidebar.php on line 26
+[30-Nov-2022 20:37:14 Asia/Jakarta] PHP Notice:  Undefined index: login_status in /home/kord6695/public_html/panel/admin/index.php on line 9
+[30-Nov-2022 20:37:14 Asia/Jakarta] PHP Notice:  Undefined variable: data_user in /home/kord6695/public_html/panel/admin/template/sidebar.php on line 14
+[30-Nov-2022 20:37:14 Asia/Jakarta] PHP Notice:  Trying to get property 'jk' of non-object in /home/kord6695/public_html/panel/admin/template/sidebar.php on line 14
+[30-Nov-2022 20:37:14 Asia/Jakarta] PHP Notice:  Undefined variable: data_user in /home/kord6695/public_html/panel/admin/template/sidebar.php on line 18
+[30-Nov-2022 20:37:14 Asia/Jakarta] PHP Notice:  Trying to get property 'jk' of non-object in /home/kord6695/public_html/panel/admin/template/sidebar.php on line 18
+[30-Nov-2022 20:37:14 Asia/Jakarta] PHP Notice:  Undefined variable: data_user in /home/kord6695/public_html/panel/admin/template/sidebar.php on line 26
+[30-Nov-2022 20:37:14 Asia/Jakarta] PHP Notice:  Trying to get property 'nama' of non-object in /home/kord6695/public_html/panel/admin/template/sidebar.php on line 26
+[30-Nov-2022 20:37:14 Asia/Jakarta] PHP Notice:  Undefined index: login_status in /home/kord6695/public_html/panel/admin/index.php on line 9
+[30-Nov-2022 20:37:14 Asia/Jakarta] PHP Notice:  Undefined variable: data_user in /home/kord6695/public_html/panel/admin/template/sidebar.php on line 14
+[30-Nov-2022 20:37:14 Asia/Jakarta] PHP Notice:  Trying to get property 'jk' of non-object in /home/kord6695/public_html/panel/admin/template/sidebar.php on line 14
+[30-Nov-2022 20:37:14 Asia/Jakarta] PHP Notice:  Undefined variable: data_user in /home/kord6695/public_html/panel/admin/template/sidebar.php on line 18
+[30-Nov-2022 20:37:14 Asia/Jakarta] PHP Notice:  Trying to get property 'jk' of non-object in /home/kord6695/public_html/panel/admin/template/sidebar.php on line 18
+[30-Nov-2022 20:37:14 Asia/Jakarta] PHP Notice:  Undefined variable: data_user in /home/kord6695/public_html/panel/admin/template/sidebar.php on line 26
+[30-Nov-2022 20:37:14 Asia/Jakarta] PHP Notice:  Trying to get property 'nama' of non-object in /home/kord6695/public_html/panel/admin/template/sidebar.php on line 26
+[21-Dec-2022 00:15:05 Asia/Jakarta] PHP Notice:  Undefined index: login_status in /home/kord6695/public_html/panel/admin/index.php on line 9
+[21-Dec-2022 00:15:05 Asia/Jakarta] PHP Notice:  Undefined variable: data_user in /home/kord6695/public_html/panel/admin/template/sidebar.php on line 14
+[21-Dec-2022 00:15:05 Asia/Jakarta] PHP Notice:  Trying to get property 'jk' of non-object in /home/kord6695/public_html/panel/admin/template/sidebar.php on line 14
+[21-Dec-2022 00:15:05 Asia/Jakarta] PHP Notice:  Undefined variable: data_user in /home/kord6695/public_html/panel/admin/template/sidebar.php on line 18
+[21-Dec-2022 00:15:05 Asia/Jakarta] PHP Notice:  Trying to get property 'jk' of non-object in /home/kord6695/public_html/panel/admin/template/sidebar.php on line 18
+[21-Dec-2022 00:15:05 Asia/Jakarta] PHP Notice:  Undefined variable: data_user in /home/kord6695/public_html/panel/admin/template/sidebar.php on line 26
+[21-Dec-2022 00:15:05 Asia/Jakarta] PHP Notice:  Trying to get property 'nama' of non-object in /home/kord6695/public_html/panel/admin/template/sidebar.php on line 26

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>View Photo</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="viewbox.css">
+	<link rel="stylesheet" type="text/css" href="all.css">
+	<style>
+		pre.prettyprint.prettyprinted{
+			padding: 10px 20px;
+			border: 1px solid #ccc;
+			margin:0 0 40px;
+		}
+		dl{
+			display: block;
+			margin: 5px 0 20px;
+			overflow: hidden;
+		}
+		dl > dt{
+			display: block;
+			clear:left;
+			float:left;
+			min-width: 160px;
+		}
+		dl > dd{
+			display: block;
+			float:left;
+			margin: 0 0 20px 10px;
+		}
+	</style>
+</head>
+<body>
+
+	<header class="jumbotron">
+		<div class="container">
+			<h1><i class="far fa-images"></i> ViewBox Demo</h1>
+			<p>Viewbox is a jQuery plugin for displaying images and other HTML content. &nbsp; <a href="https://github.com/pgooood/viewbox" target="_blank"><i class="fab fa-github"></i> Download on GitHub</a></p>
+		</div>
+	</header>
+	<main class="container">
+			<div class="row mb-4">
+				<div class="col-6 col-md-3">
+					<a href="demo/images/i1.jpg" class="thumbnail" title="Awowowok">
+						<img src="demo/images/i1-thumb.jpg" alt="" class="img-fluid">
+					</a>
+				</div>
+				<div class="col-6 col-md-3">
+					<a href="images/i2.jpg" class="thumbnail" title="Rotterdam">
+						<img src="images/i2-thumb.jpg" alt="" class="img-fluid">
+					</a>
+				</div>
+				<div class="col-6 col-md-3">
+					<a href="images/i3.jpg" class="thumbnail" data-viewbox-title="&lt;a href=&quot;https://www.nycgo.com/&quot;&gt;New York&lt;/a&gt;">
+						<img src="images/i3-thumb.jpg" alt="" class="img-fluid">
+					</a>
+				</div>
+				<div class="col-6 col-md-3">
+					<a href="images/i4.jpg" class="thumbnail" title="Istanbul">
+						<img src="images/i4-thumb.jpg" alt="" class="img-fluid">
+					</a>
+				</div>
+			</div>
+			<p><a href="images/i5.jpg" class="thumbnail-2">
+				<img src="images/i5-thumb.jpg" alt="" class="img-fluid">
+			</a></p>
+			<p>&nbsp;</p>
+		</main>
+
+		<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="popper.min.js"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="run_prettify.js"></script>
+		<script type="text/javascript" src="jquery.viewbox.min.js"></script>
+
+
+		<script>
+		$(function(){
+			
+			$('.thumbnail').viewbox();
+			$('.thumbnail-2').viewbox({fullscreenButton: true});
+
+			(function(){
+				var vb = $('.popup-link').viewbox();
+				$('.popup-open-button').click(function(){
+					vb.trigger('viewbox.open');
+				});
+				$('.close-button').click(function(){
+					vb.trigger('viewbox.close');
+				});
+			})();
+			
+		});
+	</script>
+</body>
+</html>

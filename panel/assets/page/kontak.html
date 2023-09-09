@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title>AdminLTE 3 | Dashboard 2</title>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+<div class="wrapper">
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+    </ul>
+
+    <!-- SEARCH FORM -->
+    <div class="text-black ml-2 mr-2 justify-content-center">
+      Senin, 20 Oktober 2022
+    </div>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="./" class="text-center brand-link">
+      <span class="brand-text font-weight-light">Panel Website</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">Alexander Pierce</a>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">
+              <i class="nav-icon fas fa-home"></i>
+              <p>
+                Dashboard
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="akun.html" class="nav-link">
+              <i class="nav-icon fas fa-user-lock"></i>
+              <p>
+                Manajemen Akun
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="slider.html" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Slider
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="portal.html" class="nav-link">
+              <i class="nav-icon fas fa-newspaper"></i>
+              <p>
+                Portal Berita
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">
+              <i class="nav-icon fas fa-info"></i>
+              <p>
+                Tentang Kami
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="anggota.html" class="nav-link">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                Anggota
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="new-anggota.html" class="nav-link">
+              <i class="nav-icon fas fa-user-edit"></i>
+              <p>
+                Pendaftaran Anggota
+              </p>
+            </a>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon far fa-image"></i>
+              <p>
+                Galeri
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="foto.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Foto</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="video.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Video</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="kontak.html" class="nav-link">
+              <i class="nav-icon fas fa-id-card"></i>
+              <p>
+                Kontak
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="logs.html" class="nav-link">
+              <i class="nav-icon fas fa-sync"></i>
+              <p>
+                Logs
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="help.html" class="nav-link">
+              <i class="nav-icon fas fa-info-circle"></i>
+              <p>
+                Help
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="pages/portal.html" class="nav-link bg-danger text-center">
+              <i class="nav-icon fas fa-power-off"></i>
+              <p>
+                Logout
+              </p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Kontak</h1>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    Kontak
+                </div>
+                <div class="card-body">
+                    <form action="" method="post">
+                        <div class="form-group row">
+                            <div class="col-md-2">
+                                <label for="">
+                                    Alamat
+                                </label>
+                            </div>
+                            <div class="col-md-10">
+                                <textarea rows="3" name="alamat" class="form-control"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-2">
+                                <label for="">
+                                    Link Alamat
+                                </label>
+                            </div>
+                            <div class="col-md-10">
+                                <input type="text" name="link-peta-embed" class="form-control">
+                            </div>
+                        </div>
+                        <!-- telp -->
+                        <div class="form-group row">
+                            <div class="col-md-2">
+                                <label for="">
+                                    View Telp
+                                </label>
+                            </div>
+                            <div class="col-md-10">
+                                <div class="mb-2">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="telp1" name="telp" class="custom-control-input showtelp">
+                                        <label class="custom-control-label" for="telp1">Ya</label>
+                                      </div>
+                                      <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="telp2" name="telp" class="custom-control-input hidetelp">
+                                        <label class="custom-control-label" for="telp2">Tidak</label>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="telp">
+                            <div class="form-group row">
+                                <div class="col-md-2">
+                                    <label for="">
+                                        No Telp
+                                    </label>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" name="no_telp" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end telp -->
+                        <!-- email -->
+                        <div class="form-group row">
+                            <div class="col-md-2">
+                                <label for="">
+                                    View Email
+                                </label>
+                            </div>
+                            <div class="col-md-10">
+                                <div class="mb-2">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="email1" name="show_email" class="custom-control-input showemail">
+                                        <label class="custom-control-label" for="email1">Ya</label>
+                                      </div>
+                                      <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="email2" name="show_email" class="custom-control-input hideemail">
+                                        <label class="custom-control-label" for="email2">Tidak</label>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="email">
+                            <div class="form-group row">
+                                <div class="col-md-2">
+                                    <label for="">
+                                        Email
+                                    </label>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" name="email" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end email -->
+                        <!-- whatsapp -->
+                        <div class="form-group row">
+                            <div class="col-md-2">
+                                <label for="">
+                                    View Whatsapp
+                                </label>
+                            </div>
+                            <div class="col-md-10">
+                                <div class="mb-2">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="wa1" name="show_wa" class="custom-control-input showwa">
+                                        <label class="custom-control-label" for="wa1">Ya</label>
+                                      </div>
+                                      <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="wa2" name="show_wa" class="custom-control-input hidewa">
+                                        <label class="custom-control-label" for="wa2">Tidak</label>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="wa">
+                            <div class="form-group row">
+                                <div class="col-md-2">
+                                    <label for="">
+                                        Whatsapp
+                                    </label>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" name="whatsapp" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end whatsapp -->
+                        <!-- fb -->
+                        <div class="form-group row">
+                            <div class="col-md-2">
+                                <label for="">
+                                    View Facebook
+                                </label>
+                            </div>
+                            <div class="col-md-10">
+                                <div class="mb-2">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="fb1" name="show_fb" class="custom-control-input showfb">
+                                        <label class="custom-control-label" for="fb1">Ya</label>
+                                      </div>
+                                      <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="fb2" name="show_fb" class="custom-control-input hidefb">
+                                        <label class="custom-control-label" for="fb2">Tidak</label>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="fb">
+                            <div class="form-group row">
+                                <div class="col-md-2">
+                                    <label for="">
+                                        Facebook
+                                    </label>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" name="facebook" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-2">
+                                    <label for="">
+                                        Link Facebook
+                                    </label>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" name="link-fb" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end fb -->
+                        <!-- ig -->
+                        <div class="form-group row">
+                            <div class="col-md-2">
+                                <label for="">
+                                    View Instagram
+                                </label>
+                            </div>
+                            <div class="col-md-10">
+                                <div class="mb-2">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="ig1" name="show_ig" class="custom-control-input showig">
+                                        <label class="custom-control-label" for="ig1">Ya</label>
+                                      </div>
+                                      <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="ig2" name="show_ig" class="custom-control-input hideig">
+                                        <label class="custom-control-label" for="ig2">Tidak</label>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="ig">
+                            <div class="form-group row">
+                                <div class="col-md-2">
+                                    <label for="">
+                                        Instagram
+                                    </label>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" name="instagram" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-2">
+                                    <label for="">
+                                        Link Instagram
+                                    </label>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" name="link-ig" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end ig -->
+                        <!-- yt -->
+                        <div class="form-group row">
+                            <div class="col-md-2">
+                                <label for="">
+                                    View Youtube
+                                </label>
+                            </div>
+                            <div class="col-md-10">
+                                <div class="mb-2">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="yt1" name="show_yt" class="custom-control-input showyt">
+                                        <label class="custom-control-label" for="yt1">Ya</label>
+                                      </div>
+                                      <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="yt2" name="show_yt" class="custom-control-input hideyt">
+                                        <label class="custom-control-label" for="yt2">Tidak</label>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="yt">
+                            <div class="form-group row">
+                                <div class="col-md-2">
+                                    <label for="">
+                                        Youtube
+                                    </label>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" name="youtube" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-2">
+                                    <label for="">
+                                        Link Youtube
+                                    </label>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" name="link-yt" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end yt -->
+                        <!-- tombol simpan -->
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-10 offset-md-2">
+                                    <button type="submit" name="simpan" class="btn btn-success">Simpan</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end tombol simpan -->
+                    </form>
+                </div>
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div><!--/. container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <strong>Copyright &copy; 2022 <a href="#">Panel Web</a>.</strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 1.0.4
+    </div>
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED SCRIPTS -->
+<!-- jQuery -->
+<script src="../plugins/jquery/jquery.min.js"></script>
+
+<script>
+    // show hide telp
+    $('#telp').hide();
+
+    $('.showtelp').click(function() {
+        $('#telp').show();
+    });
+    $('.hidetelp').click(function() {
+        $('#telp').hide();
+    });
+
+    // show hide email
+    $('#email').hide();
+    $('.showemail').click(function() {
+        $('#email').show();
+    });
+    $('.hideemail').click(function() {
+        $('#email').hide();
+    });
+
+    // show hide wa
+    $('#wa').hide();
+    $('.showwa').click(function() {
+        $('#wa').show();
+    });
+    $('.hidewa').click(function() {
+        $('#wa').hide();
+    });
+
+    // show hide fb
+    $('#fb').hide();
+    
+    $('.showfb').click(function() {
+        $('#fb').show();
+    });
+
+    $('.hidefb').click(function() {
+        $('#fb').hide();
+    });
+
+    // show hide ig
+    $('#ig').hide();
+    
+    $('.showig').click(function() {
+        $('#ig').show();
+    });
+
+    $('.hideig').click(function() {
+        $('#ig').hide();
+    });
+
+    // show hide yt
+    $('#yt').hide();
+    
+    $('.showyt').click(function() {
+        $('#yt').show();
+    });
+
+    $('.hideyt').click(function() {
+        $('#yt').hide();
+    });
+</script>
+<!-- Bootstrap -->
+<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/adminlte.js"></script>
+
+<!-- OPTIONAL SCRIPTS -->
+<script src="../dist/js/demo.js"></script>
+
+<!-- PAGE PLUGINS -->
+<!-- jQuery Mapael -->
+<script src="../plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
+<script src="../plugins/raphael/raphael.min.js"></script>
+<script src="../plugins/jquery-mapael/jquery.mapael.min.js"></script>
+<script src="../plugins/jquery-mapael/maps/usa_states.min.js"></script>
+<!-- ChartJS -->
+<script src="../plugins/chart.js/Chart.min.js"></script>
+
+<!-- PAGE SCRIPTS -->
+<script src="../dist/js/pages/dashboard2.js"></script>
+</body>
+</html>
