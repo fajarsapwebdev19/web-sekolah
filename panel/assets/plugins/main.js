@@ -675,6 +675,50 @@ $('.data-new-anggota').on('click', '.confirm', function() {
   });
 });
 
+$(".data-industri").DataTable({
+  serverSide: true,
+  processing: true,
+  ajax: "server-side/industri.php"
+});
+
+$(".data-industri").on("click", '.update_industri', function(){
+  var id = $(this).data("id");
+
+  $.ajax({
+    url: "ajax/action-industri.php",
+    data: 
+    {
+      "id": id,
+      "method": "update"
+    },
+    type: "POST",
+    success:function(respond)
+    {
+      $("#ubah-hub-industri").modal('show');
+      $("#edit-industri").html(respond);
+    }
+  });
+});
+
+$(".data-industri").on("click", ".delete_industri", function(){
+  var id = $(this).data("id");
+
+  $.ajax({
+    url: "ajax/action-industri.php",
+    data: 
+    {
+      "id" : id,
+      "method" : "delete"
+    },
+    type: "POST",
+    success:function(respond)
+    {
+      $("#del-hub-industri").modal("show");
+      $("#delete-industri").html(respond);
+    }
+  })
+})
+
 
 // pause in close  modal video view
 $('#view-video').on('hidden.bs.modal', function () {

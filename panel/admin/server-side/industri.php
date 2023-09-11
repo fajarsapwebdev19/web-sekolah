@@ -7,25 +7,22 @@ $requestData= $_REQUEST;
 $columns = array(
   0 => 'null',
   1 => 'null',
-  2 => 'nama',
-  3 => 'nik',
-  4 => 'jk',
-  5 => 'asal_instansi',
-  6 => 'status'
+  2 => 'nama_perusahaan',
+  3 => 'null'
 );
 
 
-$sql = "SELECT * FROM registrasi_anggota WHERE status='Terima'";
+$sql = "SELECT * FROM hub_industri";
 
 $query = mysqli_query($con, $sql);
 $totalData = mysqli_num_rows($query);
 $totalFiltered = $totalData;
 
-$sql = "SELECT * FROM registrasi_anggota WHERE 1=1 AND status='Terima'";
+$sql = "SELECT * FROM hub_industri WHERE 1=1";
 
 if( !empty($requestData['search']['value']) ) {
-	$sql.=" AND  nama LIKE '%".$requestData['search']['value']."%' ";    
-	$sql.=" OR jk LIKE '%".$requestData['search']['value']."%' ";
+	$sql.=" AND  nama_perusahaan LIKE '%".$requestData['search']['value']."%' ";    
+	// $sql.=" OR jk LIKE '%".$requestData['search']['value']."%' ";
 }
 
 $query = mysqli_query($con, $sql);
@@ -36,13 +33,9 @@ $query = mysqli_query($con, $sql);
 $data = array();
 while( $row = mysqli_fetch_object($query) ) {
 	$nestedData=array();
-    $nestedData[] = "";
-    $nestedData[] = "<button class='btn btn-info view_data' data-id='{$row->registrasi_id}'><em class='fas fa-eye'></em></button>";
-	$nestedData[] = $row->nama;
-	$nestedData[] = $row->nik;
-	$nestedData[] = $row->jk;
-	$nestedData[] = $row->asal_instansi;
-	$nestedData[] = $row->no_telp;
+	$nestedData[] = "<img src='../../assets/galeri/foto/industri/{$row->logo_perusahaan}' width='50' height='50'>";
+	$nestedData[] = $row->nama_perusahaan;
+  $nestedData[] = "<button class='btn btn-info update_industri mb-2 btn-sm' data-id='{$row->id}'><em class='fas fa-edit'></em></button> <button class='btn btn-danger delete_industri mb-2 btn-sm' data-id='{$row->id}'><em class='fas fa-trash'></em></button>";
 
 	$data[] = $nestedData;
 }

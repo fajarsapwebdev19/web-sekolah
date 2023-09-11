@@ -16,7 +16,7 @@
     <section class="content">
       <div class="container-fluid">
         <div class="mt-1 mb-2">
-            <button type="button" data-target="#tambah-anggota" data-toggle="modal" class="btn btn-primary">
+            <button type="button" data-target="#tambah-hub-industri" data-toggle="modal" class="btn btn-primary">
                 <em class="fas fa-plus"></em> Tambah Perusahaan
             </button>
 
@@ -48,6 +48,7 @@
               <div class="card-body">
                 <div class="row">
                   <div class="col-md-12">
+                    <div class="test"></div>
                     <div class="table-responsive-sm">
                       <table class="table table-hover data-industri">
                         <thead>

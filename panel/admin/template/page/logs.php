@@ -27,7 +27,7 @@
                         Version 1.0.0
                     </h4>
                     <p> 
-                        => Penambahan Slide Ke Dalam Web
+                        <b class="text-success">[Pembaruan]</b> Penambahan Slide Ke Dalam Web
                         <br>
                         => Tampilan Responsive
                         <br>
