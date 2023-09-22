@@ -46,7 +46,7 @@
                             $date = date('d-m-Y', strtotime($data_portal->create_date));
                         }
                 ?>
-                <div class="mt-4">
+                    <div class="mt-4">
                     <div class="card">
                         <div class="card-body">
                             <div class="row">
@@ -74,12 +74,25 @@
                 ?>
              </div>
          </div>
-         <div class="center col-md-12">
-             <button type="button" onclick="javascript:window.location.href='?page=artikel'"
-                 class="btn btn-selengkapnya">
-                 Lihat Selengkapnya
-             </button>
-         </div>
+         <?php
+            if(mysqli_num_rows($query_portal) == 0)
+            {
+                ?>
+                    <div class="alert alert-warning">
+                        Berita Kosong !
+                    </div>
+                <?php
+            }else{
+                ?>
+                    <div class="center col-md-12">
+                        <button type="button" onclick="javascript:window.location.href='?page=artikel'"
+                            class="btn btn-selengkapnya">
+                            Lihat Selengkapnya
+                        </button>
+                    </div>
+                <?php
+            }
+         ?>
  </section>
  <!-- end portal -->
 
@@ -110,7 +123,7 @@
                         ?>
                             <div class="section-item-slider">
                                 <div class="section-item-thumbnail">
-                                    <img src="assets/galeri/foto/hubungan-industri/<?= $d_hub->logo_perusahaan; ?>"
+                                    <img src="assets/galeri/foto/industri/<?= $d_hub->logo_perusahaan; ?>"
                                         alt="<?= $d_hub->nama_perusahaan; ?>">
                                 </div>
                                 <div class="section-item-caption">

@@ -13,8 +13,10 @@
 
                 if($yt_count === 0){
                     ?>
-                        <div class="alert alert-warning">
-                            Video Kosong
+                        <div class="col-sm-12">
+                                <div class="alert alert-warning">
+                                    Video Kosong
+                                </div>
                         </div>
                     <?php
                 }else{

@@ -36,10 +36,7 @@
                         <a class="nav-link auto-collapse" href="https://ppdbsmkpgrineglasari.dev19.my.id">PPDB Online</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link auto-collapse" href="?page=artikel">Informasi PPDB</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link auto-collapse" href="?page=artikel">Pendidik Dan Tenaga Kependidikan</a>
+                        <a class="nav-link auto-collapse" href="?page=info_ppdb">Informasi PPDB</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">

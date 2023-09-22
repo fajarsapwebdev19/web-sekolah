@@ -39,16 +39,8 @@
         require 'page/read.php';
         break;
 
-        case 'koperasi';
-        require 'page/koperasi.php';
-        break;
-
-        case 'yayasan';
-        require 'page/yayasan.php';
-        break;
-
-        case 'klinik';
-        require 'page/klinik.php';
+        case 'info_ppdb';
+        require 'page/info_ppdb.php';
         break;
 
         case 'home':

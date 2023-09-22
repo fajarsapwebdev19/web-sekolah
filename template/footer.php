@@ -48,7 +48,6 @@
                     <ul class="footer-nav">
                         <li><a href="?page=artikel">Berita</a></li>
                         <li><a href="?page=about">Tentang Kami</a></li>
-                        <li><a href="?page=team">Tim Kami</a></li>
                         <li><a href="?page=kontak">Kontak</a></li>
                     </ul>
                 </div>

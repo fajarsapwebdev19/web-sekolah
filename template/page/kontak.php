@@ -9,7 +9,7 @@
              <div class="card">
                  <div class="card-body">
                      <div class="title-kontak">
-                         <em class="fas fa-home"></em> Alamat
+                         <em class="fas fa-map-marker-alt"></em> Alamat
                      </div>
                      <div class="isi-kontak">
                          <?= $data_kontak->alamat; ?>
