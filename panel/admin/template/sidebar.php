@@ -40,11 +40,26 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="?page=account" class="nav-link <?php if($page == "account"){echo 'active'; }?>">
-                        <i class="nav-icon fas fa-user-lock"></i>
+                <?php
+                    if($data_user->is_developer == 1)
+                    {
+                        ?>
+                            <li class="nav-item">
+                                <a href="?page=account" class="nav-link <?php if($page == "account"){echo 'active'; }?>">
+                                    <i class="nav-icon fas fa-user-lock"></i>
+                                    <p>
+                                        Manajemen Akun
+                                    </p>
+                                </a>
+                            </li>
+                        <?php
+                    }
+                ?>
+                 <li class="nav-item">
+                    <a href="?page=info_ppdb" class="nav-link <?= $page == 'info_ppdb' ? 'active' : ''; ?>">
+                        <i class="nav-icon fas fa-bullhorn"></i>
                         <p>
-                            Manajemen Akun
+                            Informasi PPDB
                         </p>
                     </a>
                 </li>
@@ -135,6 +150,37 @@
                         </p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="?page=ticket" class="nav-link <?= $page == 'ticket' ? 'active' : ''; ?>">
+                        <i class="nav-icon fas fa fa-ticket-alt"></i>
+                        <p>
+                            Tiket
+                        </p>
+                    </a>
+                </li>
+                <?php
+                    if($data_user->is_developer == 1)
+                    {
+                        ?>
+                            <li class="nav-item">
+                                <a href="?page=version_control" class="nav-link <?= $page == 'version_control' ? 'active' : ''; ?>">
+                                    <i class="nav-icon fas fa fa-cog"></i>
+                                    <p>
+                                        Kelola Versi
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="?page=info_hd" class="nav-link <?= $page == 'info_hd' ? 'active' : ''; ?>">
+                                    <i class="nav-icon fas fa-bell"></i>
+                                    <p>
+                                        Informasi Helpdesk
+                                    </p>
+                                </a>
+                            </li>
+                        <?php
+                    }
+                ?>
                 <li class="nav-item">
                     <a href="logout.php" class="nav-link bg-danger text-center">
                         <i class="nav-icon fas fa-power-off"></i>

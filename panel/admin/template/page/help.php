@@ -19,7 +19,7 @@
           <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    Help
+                    <em class="fas fa-question"></em> Question
                 </div>
                 <div class="card-body">
                     <div class="accordion" id="accordionExample">
@@ -167,9 +167,9 @@
                 <div class="card-body">
                     <p>Jika anda mengalami kendala ketika menggunakan aplikasi panel yang kami buat atau ada fitur tambahan silahkan hubungi Nomor Di Bawah
                     <br>
-                    <em class="fab fa-whatsapp-square text-success"></em> Fajar Saputra : 081254199564
+                      <em class="fab fa-whatsapp-square text-success"></em> Fajar Saputra : 081254199564
                     <br>
-                    <em class="fab fa-whatsapp-square text-success"></em> Alvira Sofani : 089607252869
+                    Atau Open Tiket Pada Fitur Tiket
                     </p>
                 </div>
             </div>

@@ -10,55 +10,72 @@
       </div>
       <form action="proses/action-akun.php" method="post" class="needs-validation" novalidate autocomplete="off">
         <div class="modal-body">
-            <div class="form-group">
-                <label for="">
-                    Nama
-                </label>
-                <input type="text" name="nama" class="form-control" required>
+          <div class="form-group">
+            <label for="">
+              Nama
+            </label>
+            <input type="text" name="nama" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="">
+              Jenis Kelamin
+            </label>
+            <div class="mt-1 mb-1">
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline1" name="jenis_kelamin" class="custom-control-input" value="Laki-Laki" required>
+                <label class="custom-control-label" for="customRadioInline1">Laki-Laki</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline2" name="jenis_kelamin" class="custom-control-input" value="Perempuan" required>
+                <label class="custom-control-label" for="customRadioInline2">Perempuan</label>
+              </div>
             </div>
-            <div class="form-group">
-                <label for="">
-                    Jenis Kelamin
-                </label>
-                <div class="mt-1 mb-1">
-                    <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="customRadioInline1" name="jenis_kelamin" class="custom-control-input" value="Laki-Laki" required>
-                        <label class="custom-control-label" for="customRadioInline1">Laki-Laki</label>
-                    </div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="customRadioInline2" name="jenis_kelamin" class="custom-control-input" value="Perempuan" required>
-                        <label class="custom-control-label" for="customRadioInline2">Perempuan</label>
-                    </div>
-                </div>
+          </div>
+          <div class="form-group">
+            <label for="">
+              Tanggal Lahir
+            </label>
+            <input type="text" name="tgl_lahir" class="form-control date" required>
+          </div>
+          <div class="form-group">
+            <label for="">
+              Username
+            </label>
+            <input type="text" name="username" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="">
+              Password
+            </label>
+            <input type="text" name="password" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="">
+              Email
+            </label>
+            <input type="text" name="email" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">
+              Permision
+            </label>
+            <div class="mt-1 mb-1">
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline11" name="is_dev" class="custom-control-input" value="1" required>
+                <label class="custom-control-label" for="customRadioInline11">Developer</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline21" name="is_dev" class="custom-control-input" value="0" required>
+                <label class="custom-control-label" for="customRadioInline21">Admin</label>
+              </div>
             </div>
-            <div class="form-group">
-                <label for="">
-                    Tanggal Lahir
-                </label>
-                <input type="text" name="tgl_lahir" class="form-control date" required>
-            </div>
-            <div class="form-group">
-                <label for="">
-                    Username
-                </label>
-                <input type="text" name="username" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="">
-                    Password
-                </label>
-                <input type="text" name="password" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="">
-                    Email
-                </label>
-                <input type="text" name="email" class="form-control">
-            </div>
+          </div>
         </div>
+
+
         <div class="modal-footer">
-            <button type="submit" name="tambah" class="btn btn-success">Tambah</button>
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Batal</button>
+          <button type="submit" name="tambah" class="btn btn-success">Tambah</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Batal</button>
         </div>
       </form>
     </div>
@@ -77,7 +94,7 @@
         </button>
       </div>
       <form action="proses/action-akun.php" id="up-user" method="post" autocomplete="off">
-        
+
       </form>
     </div>
   </div>
@@ -95,7 +112,7 @@
         </button>
       </div>
       <form action="proses/action-akun.php" id="delete-user" method="post" autocomplete="off">
-        
+
       </form>
     </div>
   </div>

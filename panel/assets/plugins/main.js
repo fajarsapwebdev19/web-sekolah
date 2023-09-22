@@ -719,6 +719,47 @@ $(".data-industri").on("click", ".delete_industri", function(){
   })
 })
 
+$(".info-ppdb").DataTable({
+  serverSide: true,
+  processing: true,
+  ajax: "server-side/info-ppdb.php"
+});
+
+$(".info-ppdb").on('click', '.update', function(){
+  var id = $(this).data("id");
+  $.ajax({
+    url: "ajax/action-info-ppdb.php",
+    data: {
+      "id" : id,
+      "method": "update"
+    },
+    type: "POST",
+    success:function(response)
+    {
+      $('#update-info-ppdb').modal("show");
+      $("#action-update-info-ppdb").html(response);
+    }
+  });
+});
+
+$(".info-ppdb").on("click", ".delete", function(){
+  var id = $(this).data("id");
+
+  $.ajax({
+    url: "ajax/action-info-ppdb.php",
+    data: {
+      "id" : id,
+      "method": "delete"
+    },
+    type: "POST",
+    success:function(response)
+    {
+      $("#delete-info-ppdb").modal('show');
+      $("#confirm_delete_info").html(response);
+    }
+  })
+})
+
 
 // pause in close  modal video view
 $('#view-video').on('hidden.bs.modal', function () {

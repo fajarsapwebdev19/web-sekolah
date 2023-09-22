@@ -32,7 +32,7 @@
         break;
 
         case 'anggota';
-        $title = 'Anggota | Admin Panel';
+        $title = 'PTK | Admin Panel';
         break;
 
         case 'galery_foto';
@@ -48,11 +48,11 @@
         break;
 
         case 'kontak';
-        $title = 'Pengurus | Admin Panel';
+        $title = 'Kontak | Admin Panel';
         break;
 
-        case 'new_anggota';
-        $title = 'New Anggota | Admin Panel';
+        case 'hub';
+        $title = 'Hubungan Kemitraan | Admin Panel';
         break;
 
         case 'logs';
@@ -63,8 +63,8 @@
         $title = 'Help | Admin Panel';
         break;
 
-        case 'yayasan';
-        $title = 'Yayasan | Admin Panel';
+        case 'info_ppdb';
+        $title = 'Info PPDB | Admin Panel';
         break;
 
         case 'klinik';

@@ -100,7 +100,7 @@
           <div class="col-md-12">
             <div class="card">
               <div class="card-header">
-                <h5 class="card-title">Pendaftaran Anggota</h5>
+                <h5 class="card-title"><em class="fas fa-bullhorn"></em> Informasi Helpdesk</h5>
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-card-widget="collapse">
                     <i class="fas fa-minus"></i>
@@ -114,18 +114,15 @@
               <div class="card-body">
                 <div class="row">
                   <div class="col-md-12">
-                    <div class="table-responsive-xl">
-                      <table class="table table-hover data-anggota">
-                        <thead>
-                          <tr>
-                            <th>No</th>
-                            <th>Nama</th>
-                            <th>JK</th>
-                            <th>Asal Instansi</th>
-                            <th>Status</th>
-                          </tr>
-                        </thead>
-                      </table>
+                    <div class="card bg-light">
+                      <div class="card-header bg-dark">
+                        <h5><em class="fas fa-envelope"></em> Judul</h5>
+                        <h6 class="text-primary">Helpdesk</h6>
+                        <p><em class="fas fa-clock"></em> <b>18.29</b> <em class="fas fa-calendar"></em> <b>10-10-2023</b></p>
+                      </div>
+                      <div class="card-body">
+                        Hello World
+                      </div>
                     </div>
                   </div>
                   <!-- /.col -->

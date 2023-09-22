@@ -1,14 +1,11 @@
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
-  <?php
-  if ($data_user->is_developer == 1) {
-  ?>
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Manajemen Akun</h1>
+            <h1 class="m-0 text-dark">Informasi PPDB</h1>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
@@ -19,24 +16,24 @@
     <section class="content">
       <div class="container-fluid">
         <div class="mt-1 mb-2">
-          <button type="button" data-toggle="modal" data-target="#tambah-akun" class="btn btn-primary">
-            <em class="fas fa-user-plus"></em> Tambah Akun
-          </button>
-
           <div class="mb-2 mt-2">
-            <?php
-            if (isset($_SESSION['val'])) {
-              echo $_SESSION['val'];
-              unset($_SESSION['val']);
-            }
-            ?>
+            <button type="button" data-toggle="modal" data-target="#tambah-info-ppdb" class="btn btn-primary"> <em class="fas fa-plus"></em> Tambah </button>
           </div>
+            <div class="mb-2 mt-2">
+                <?php
+                  if(isset($_SESSION['val']))
+                  {
+                    echo $_SESSION['val'];
+                    unset($_SESSION['val']);
+                  }
+                ?>
+            </div>
         </div>
         <div class="row">
           <div class="col-md-12">
             <div class="card">
               <div class="card-header">
-                <h5 class="card-title">Manajemen Akun</h5>
+                <h5 class="card-title">Informasi PPDB</h5>
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-card-widget="collapse">
                     <i class="fas fa-minus"></i>
@@ -49,25 +46,19 @@
               <!-- /.card-header -->
               <div class="card-body">
                 <div class="row">
-                  <div class="col-md-12">
-                    <div class="table-responsive-xl">
-                      <table class="table table-hover akun-panel nowrap">
+                  <div class="col-sm-12">
+                    <div class="table table-responsive-xl table-hover">
+                      <table class="table info-ppdb">
                         <thead>
                           <tr>
-                            <th>No</th>
-                            <th>Nama</th>
-                            <th>JK</th>
-                            <th>Usia</th>
-                            <th>Username</th>
-                            <th>Password</th>
-                            <th>Last Login</th>
-                            <th>Status</th>
+                            <th>Judul</th>
+                            <th>Isi</th>
+                            <th>Tanggal & Waktu</th>
                             <th>Action</th>
                           </tr>
                         </thead>
                       </table>
                     </div>
-                    <!-- /.table-responsive-md -->
                   </div>
                   <!-- /.col -->
                 </div>
@@ -83,23 +74,6 @@
       </div><!--/. container-fluid -->
     </section>
     <!-- /.content -->
-  <?php
-  } else if ($data_user->is_developer == 0) {
-  ?>
-    <section class="content">
-      <div class="container-fluid">
-        <div class="pt-4">
-          <div class="alert alert-warning" role="alert">
-            <h4 class="alert-heading"><em class="fas fa-bullhorn"></em> Alert</h4>
-            <p>Anda Tidak Memiliki Akses Ke Halaman Ini</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  <?php
-  }
-  ?>
-</div>
-<!-- /.content-wrapper -->
-<?php require 'action/akun.php'; ?>
-<script src="../assets/plugins/jquery/jquery.min.js"></script>
+  </div>
+  <!-- /.content-wrapper -->
+  <?php require 'action/info_ppdb.php'; ?>

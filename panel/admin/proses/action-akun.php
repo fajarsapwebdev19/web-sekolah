@@ -31,12 +31,13 @@
         $username = mysqli_real_escape_string($con, $_POST['username']);
         $password = mysqli_real_escape_string($con, $_POST['password']);
         $email = mysqli_real_escape_string($con, $_POST['email']);
+        $is_dev = mysqli_real_escape_string($con, $_POST['is_dev']);
         $status_akun = "Aktif";
         $create_date = date('Y-m-d');
         $last_login = NULL;
         $role = "Admin";
 
-        $tambah = mysqli_query($con, "INSERT INTO user VALUES ('$id', '$nama', '$jenis_kelamin','$tgl_lahir', '$username', '$password', '$email', '$status_akun', '$create_date', NULL, '$role')");
+        $tambah = mysqli_query($con, "INSERT INTO user VALUES ('$id', '$nama', '$jenis_kelamin','$tgl_lahir', '$username', '$password', '$email', '$status_akun', '$create_date', NULL, '$is_dev', '$role')");
 
         if($tambah)
         {

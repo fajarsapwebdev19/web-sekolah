@@ -2,7 +2,8 @@
     // set default value
     $current_page = 'home';
 
-    if(array_key_exists('page', $_GET)){
+    if(array_key_exists('page', $_GET))
+    {
         $current_page = $_GET['page'];
     }
 
@@ -51,20 +52,12 @@
         require 'page/kontak.php';
         break;
 
-        case 'new_anggota';
-        require 'page/new_anggota.php';
-        break;
-
         case 'hub';
         require 'page/hub.php';
         break;
 
-        case 'klinik';
-        require 'page/klinik.php';
-        break;
-
-        case 'koperasi';
-        require 'page/koperasi.php';
+        case 'info_ppdb';
+        require 'page/ppdb_info.php';
         break;
 
         case 'logs';

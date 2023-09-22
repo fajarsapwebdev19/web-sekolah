@@ -5,25 +5,24 @@ require '../../../connection/database_connect.php';
 $requestData= $_REQUEST;
 
 $columns = array(
-  0 => 'null', 
-  1 => 'nama',
-  2 => 'jk',
-  3 => 'asal_instansi',
-  4 => 'status'
+  0 => 'judul', 
+  1 => 'isi',
+  2 => 'tanggal',
+  3 => 'null'
 );
 
 
-$sql = "SELECT * FROM registrasi_anggota";
+$sql = "SELECT * FROM info_ppdb";
 
 $query = mysqli_query($con, $sql);
 $totalData = mysqli_num_rows($query);
 $totalFiltered = $totalData;
 
-$sql = "SELECT * FROM registrasi_anggota WHERE 1=1";
+$sql = "SELECT * FROM info_ppdb WHERE 1=1";
 
 if( !empty($requestData['search']['value']) ) {
-	$sql.=" AND  nama LIKE '%".$requestData['search']['value']."%' ";    
-	$sql.=" OR jk LIKE '%".$requestData['search']['value']."%' ";
+	$sql.=" AND  judul LIKE '%".$requestData['search']['value']."%' ";    
+	$sql.=" OR tanggal LIKE '%".$requestData['search']['value']."%' ";
 }
 
 $query = mysqli_query($con, $sql);
@@ -34,24 +33,10 @@ $query = mysqli_query($con, $sql);
 $data = array();
 while( $row = mysqli_fetch_object($query) ) {
 	$nestedData=array(); 
-  	$nestedData[] = "";
-	$nestedData[] = $row->nama;
-	$nestedData[] = $row->jk;
-	$nestedData[] = $row->asal_instansi;
-	
-	if($row->status == "Menunggu")
-	{
-		$status = '<p class="badge badge-info">Menunggu</p>';
-	}
-    else if($row->status == "Terima")
-    {
-        $status = '<p class="badge badge-success">Terima</p>';
-    }else if($row->status == "Tolak")
-    {
-        $status = '<p class="badge badge-danger">Tolak</p>';
-    }
-
-	$nestedData[] = $status;
+  $nestedData[] = $row->judul;
+	$nestedData[] = substr($row->isi,0,150);
+	$nestedData[] = ($row->tanggal == NULL ? "" : date("d-m-Y", strtotime($row->tanggal))).' '. $row->waktu;
+	$nestedData[] = "<button class='btn btn-info btn-sm update mb-2' data-id='{$row->info_id}'><em class='fas fa-edit'></em></button> <button class='btn btn-danger btn-sm delete mb-2' data-id='{$row->info_id}'><em class='fas fa-trash-alt'></em></button>";
 
 	$data[] = $nestedData;
 }
