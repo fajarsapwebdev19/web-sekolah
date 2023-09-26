@@ -5,14 +5,18 @@
 
     $page = isset($_GET['page']) ? $_GET['page'] : null;
 
+    setcookie('page', $page, time()+60*60*24*6004, "/");
+
     $query = mysqli_query($con, "SELECT logo FROM about");
     $data_about = mysqli_fetch_object($query);
 
     if(empty($_SESSION['login_status'] == "OKE"))
     {
-        $_SESSION['val'] = "<div class='alert alert-danger bg-danger'>
-            Anda Belum Login
-        </div>";
+        $_SESSION['message'] = "$('#message-error').show();
+        $('.error-msg').html('Anda Belum Melakukan Login');
+        $('#message-error').fadeTo(3000, 5000).slideUp(1200, function() {
+          $('#message-error').slideUp(600)
+        });";
         header('location: ../'); 
     }else{
         $user_session = $_SESSION['username'];

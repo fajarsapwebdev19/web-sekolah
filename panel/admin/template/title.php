@@ -67,8 +67,8 @@
         $title = 'Info PPDB | Admin Panel';
         break;
 
-        case 'klinik';
-        $title = 'Klinik | Admin Panel';
+        case 'ticket';
+        $title = 'Tiket | Admin Panel';
         break;
 
         case 'koperasi';

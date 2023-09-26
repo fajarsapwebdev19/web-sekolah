@@ -67,6 +67,10 @@
         case 'help';
         require 'page/help.php';
         break;
+
+        case 'ticket';
+        require 'page/tiket.php';
+        break;
         
         default:
             require 'page/wrong-page.php';

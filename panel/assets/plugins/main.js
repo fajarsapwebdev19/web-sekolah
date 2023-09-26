@@ -760,6 +760,59 @@ $(".info-ppdb").on("click", ".delete", function(){
   })
 })
 
+var tiket_user = $('.user-tiket').DataTable({
+    serverSide: true,
+    processing: true,
+    ajax: "server-side/user-tiket.php"
+});
+
+$('.user-tiket').on('click', '.view', function(){
+    var no_ticket = $(this).data("id");
+
+    $.ajax({
+      url: "ajax/action-tiket.php",
+      data: {
+        "no_ticket" : no_ticket,
+        "method" : "view"
+      },
+      type: "POST",
+      success:function(respond)
+      {
+        $('#view-ticket').modal('show');
+        $(".view-data-ticket").html(respond);
+      }
+    })
+});
+
+$('.user-tiket').on('click', '.cancel', function(){
+    var no_ticket = $(this).data("id");
+
+    $.ajax({
+      url: "ajax/action-tiket.php",
+      data: {
+        "no_ticket" : no_ticket,
+        "method" : "cancel"
+      },
+      type: "POST",
+      success:function(respond)
+      {
+        $('#cancel-ticket').modal('show');
+        $(".cancel-action").html(respond);
+      }
+    })
+});
+
+var tiket_admin = $('.tiket-view-admin').DataTable({
+    serverSide: true,
+    processing: true,
+    ajax: "server-side/view-tiket-admin.php"
+})
+
+$(".reload-tiket").click(function(){
+  tiket_admin.ajax.reload(0);
+  tiket_user.ajax.reload(0);
+})
+
 
 // pause in close  modal video view
 $('#view-video').on('hidden.bs.modal', function () {

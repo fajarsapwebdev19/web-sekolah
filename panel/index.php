@@ -1,4 +1,19 @@
 <?php
+session_start();
+
+// jika masih ada sesi login maka akan dilempar ke halaman dashboard
+if (isset($_SESSION['login_status']) == "OKE") {
+  // get url by cookie
+  $url = isset($_COOKIE['page']) ? $_COOKIE['page'] : null;
+
+  // get history
+  if ($url == 'null' || !$url) {
+    $get = '';
+  } else {
+    $get = '?page=' . $url;
+  }
+  header("location: admin/" . $get);
+}
 require '../connection/database_connect.php';
 $query = mysqli_query($con, "SELECT * FROM about");
 $data_about = mysqli_fetch_object($query);
@@ -50,14 +65,6 @@ $data_about = mysqli_fetch_object($query);
             </div>
           </div>
         </div>
-        <?php
-        session_start();
-
-        if (isset($_SESSION['val'])) {
-          echo $_SESSION['val'];
-          unset($_SESSION['val']);
-        }
-        ?>
         </p>
         <form id="login-form">
           <div class="input-group mb-3">
@@ -96,9 +103,8 @@ $data_about = mysqli_fetch_object($query);
 
   <!-- jQuery -->
   <script src="assets/plugins/jquery/jquery.min.js"></script>
-
+  
   <script>
-    // login
 
     $('#message-succes').hide();
     $('#message-error').hide();
@@ -109,6 +115,14 @@ $data_about = mysqli_fetch_object($query);
       }
     });
 
+    <?php
+      if(isset($_SESSION['message']))
+      {
+        echo $_SESSION['message'];
+        unset($_SESSION['message']);
+      }
+    ?>
+
 
     $('.login').click(function() {
       var username = $('.username').val();
@@ -118,9 +132,9 @@ $data_about = mysqli_fetch_object($query);
 
       if (username == "") {
         $('#message-error').show();
-        $('.error-msg').html("Username Anda Kosong");
-        $("#message-error").fadeTo(3000, 5000).slideUp(1200, function() {
-          $("#message-error").slideUp(600)
+        $('.error-msg').html('Username Anda Kosong');
+        $('#message-error').fadeTo(3000, 5000).slideUp(1200, function() {
+          $('#message-error').slideUp(600)
         });
       } else if (password == "") {
         $('#message-error').show();
