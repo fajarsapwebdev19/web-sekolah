@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Sep 09, 2023 at 02:45 AM
+-- Generation Time: Sep 27, 2023 at 04:39 AM
 -- Server version: 8.0.30
 -- PHP Version: 7.3.33
 
@@ -44,7 +44,7 @@ CREATE TABLE `about` (
 --
 
 INSERT INTO `about` (`id`, `logo`, `nama_instansi`, `kab_kota`, `isi_about`, `visi`, `misi`, `modified_by`, `modified_date`) VALUES
-(1111, 'smk.png', 'SMK PGRI NEGLASARI', 'KEC NEGLASARI, KOTA TANGERANG, BANTEN (69987103)', 'SMK PGRI Neglasari tangerang berdiri mulai tahun 2012, dengan nama awal sebagai SMK PGRI Bandara, kemudian berganti menjadi SMK PGRI Neglasari pada tahun 2017. Mempunyai dua gedung untuk kegiatan KBM, kampus A di Jl. Marsekal Suryadharma dan gedung dan B di Jl. Bouraq No.4 Neglasari Tangerang, SMK PGRI Neglasari mempunyai 2 Kompetensi Keahlian, yaitu Bisnis Manajemen dengan jurusan Otomatisasi Tata Kelola Perkantoran Dan Teknik Komputer jaringan.', 'Mencetak pribadi yang unggul, berilmu, berwawasan, dan bertakwa ', '<p>Untuk mewujudkan Visi tersebut, SMK PGRI NEGLASARI merumuskan beberapa Misi Sebagai berikut : \r\n</p><p>a. Melaksanakan nilai-nilai agama dalam kehidupan sehari-hari dalam rangka meningkatkan iman dan taqwa (imtaq) baik di lingkungan sekolah, keluarga, dan masyarakat.\r\n</p><p>b. Memanfaatkan dan mengefektifkan sarana dan prasarana yang ada dan berupaya untuk melengkapinnya dalam rangka menumbuhkembangkan sekolah sebagai tempat belajar dan tempat latihan peserta didik serta memberikan pelayanan prima pada masyarakat.\r\n</p><p>c. Menjalin kerja sama dengan institusi dan DU/DI yang relevan dengan program keahlian yang ada.\r\n</p><p>d. Mengembangkan sarana belajar yang berdasarkan pada nilai luhur agama dan budaya serta nilai-nilai kebangsaan.</p>', 'fajarsapwebdev19', '2023-09-08');
+(1111, 'smk.png', 'SMK PGRI NEGLASARI', 'KEC NEGLASARI, KOTA TANGERANG, BANTEN (69987103)', 'SMK PGRI Neglasari tangerang berdiri mulai tahun 2012, dengan nama awal sebagai SMK PGRI Bandara, kemudian berganti menjadi SMK PGRI Neglasari pada tahun 2017. Mempunyai dua gedung untuk kegiatan KBM, kampus A di Jl. Marsekal Suryadharma dan gedung dan B di Jl. Bouraq No.4 Neglasari Tangerang, SMK PGRI Neglasari mempunyai 2 Kompetensi Keahlian, yaitu Bisnis Manajemen dengan jurusan Otomatisasi Tata Kelola Perkantoran Dan Teknik Komputer jaringan.', 'Mencetak pribadi yang unggul, berilmu, berwawasan, dan bertakwa ', '<p>Untuk mewujudkan Visi tersebut, SMK PGRI NEGLASARI merumuskan beberapa Misi Sebagai berikut : \r\n</p><p>a. Melaksanakan nilai-nilai agama dalam kehidupan sehari-hari dalam rangka meningkatkan iman dan taqwa (imtaq) baik di lingkungan sekolah, keluarga, dan masyarakat.\r\n</p><p>b. Memanfaatkan dan mengefektifkan sarana dan prasarana yang ada dan berupaya untuk melengkapinnya dalam rangka menumbuhkembangkan sekolah sebagai tempat belajar dan tempat latihan peserta didik serta memberikan pelayanan prima pada masyarakat.\r\n</p><p>c. Menjalin kerja sama dengan institusi dan DU/DI yang relevan dengan program keahlian yang ada.\r\n</p><p>d. Mengembangkan sarana belajar yang berdasarkan pada nilai luhur agama dan budaya serta nilai-nilai kebangsaan.</p>', 'fajarsapwebdev19', '2023-09-14');
 
 -- --------------------------------------------------------
 
@@ -81,6 +81,35 @@ CREATE TABLE `hub_industri` (
   `nama_perusahaan` varchar(90) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `logo_perusahaan` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `hub_industri`
+--
+
+INSERT INTO `hub_industri` (`id`, `nama_perusahaan`, `logo_perusahaan`) VALUES
+('836C5A38-13F1-4630-BBC8-9E71A059C485', 'ufgyugu', '1534615590_315-16-09-23.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `info_ppdb`
+--
+
+CREATE TABLE `info_ppdb` (
+  `info_id` varchar(225) NOT NULL,
+  `judul` text NOT NULL,
+  `tanggal` date DEFAULT NULL,
+  `waktu` time DEFAULT NULL,
+  `isi` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `info_ppdb`
+--
+
+INSERT INTO `info_ppdb` (`info_id`, `judul`, `tanggal`, `waktu`, `isi`) VALUES
+('1A31F3B5-CADF-5173-B230-FBC592F73F34', 'Pengumuman PPDB', '2023-09-16', '12:29:43', '<p>PPDB Untuk Tahun Ajaran 2023 / 2024 Sudah Di tutup.</p>'),
+('2B9C1189-071A-011F-6FCD-1F7DDA060307', 'Alur Pendaftaran PPDB', '2023-09-16', '11:48:40', '<p>1. Lakukan Registrasi Data Diri Di Halaman <a href=\"https://ppdbsmkpgrineglasari.dev19.my.id/?page=Reg_Casis\" target=\"_blank\">Registrasi Calon Siswa</a>&nbsp;, Dengan Mengisikan Data Diri</p><p>2. Setelah Melakukan Registrasi Sebagai Calon Siswa, Melakukan Cek Status Akun Secara Berkala Di Halaman <a href=\"https://ppdbsmkpgrineglasari.dev19.my.id/?page=Cek\" target=\"_blank\">Cek Status Akun</a>. Jika Akun Belum Aktif Harap Hubungi Admin Untuk Melakukan Aktivasi Atau Menuliskan Pesan Di Halaman Kontak Dengan Perihal Aktivasi Akun Kemudian Isikan Email Dan Nama Untuk Di Lakukan Aktivasi Oleh Admin.</p><p>3. Jika Akun Sudah Aktif Silahkan Melakukan Login Dengan Username Dan Password Yang Di Daftarkan.</p><p>4. Setelah Masuk Silahkan Klik Menu Isi Formulir Kemudian Isi Data Diri Dengan Lengkap</p><p>5. Setelah sudah melakukan isi formulir, harap tunggu konfirmasi data dari admin, sambil menunggu konfirmasi status pengisian formulir, silahkan melakukan upload berkas seperti akta lahir, kartu keluarga, skl / ijazah smp, foto 3 x 4 dan berkas pendukung seperti kartu keluarga sejahtera (kks) dan kartu indonesia pintar (kip) jika memiliki.</p><p>6. Jika status pengisian formulir sudah di terima oleh admin, silahkan melakukan cetak formulir, atau datang ke sekolah untuk mengkonfirmasi bahwa sudah melakukan daftar online&nbsp; dan melakukan pembayaran pendaftaran.</p>');
 
 -- --------------------------------------------------------
 
@@ -128,7 +157,7 @@ CREATE TABLE `kontak` (
 --
 
 INSERT INTO `kontak` (`id_kontak`, `alamat`, `link_alamat`, `view_telp`, `no_telp`, `view_email`, `email`, `view_wa`, `no_wa`, `view_fb`, `user_fb`, `link_fb`, `view_ig`, `user_ig`, `link_ig`, `view_yt`, `user_yt`, `link_yt`, `modified_date`, `modified_by`) VALUES
-('2332-8766-6657-5646-8887', 'Jl. Marsekal Surya Dharma No 1 Selapajang Jaya Kec. Neglasari Kota Tangerang - Banten 15127', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1983.512879942248!2d106.63183661195005!3d-6.12723579413716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a021c3ff1e245%3A0xf4fa11231316064b!2sSMK%20PGRI%20Neglasari!5e0!3m2!1sid!2sid!4v1694159494921!5m2!1sid!2sid', 'Y', '021-29879042', 'Y', 'smkpgrineglasari.tng@gmail.com', 'N', '000000000000', 'N', 'Lorem Ipsum', 'https://web.facebook.com/groups/IndoProgramer', 'Y', '@smkgrineta', 'https://www.instagram.com/smkgrineta', 'N', 'Lorem Ipsum', 'https://www.youtube.com', '2023-09-08', 'fajarsapwebdev19');
+('2332-8766-6657-5646-8887', 'Jl. Marsekal Surya Dharma No 1 Selapajang Jaya Kec. Neglasari Kota Tangerang - Banten 15127', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1983.512879942248!2d106.63183661195005!3d-6.12723579413716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a021c3ff1e245%3A0xf4fa11231316064b!2sSMK%20PGRI%20Neglasari!5e0!3m2!1sid!2sid!4v1694159494921!5m2!1sid!2sid', 'Y', '021-29879042', 'Y', 'smkpgrineglasari.tng@gmail.com', 'N', '000000000000', 'N', 'Lorem Ipsum', 'https://web.facebook.com/groups/IndoProgramer', 'Y', '@smkgrineta', 'https://www.instagram.com/smkgrineta', 'Y', 'SMK GRINETA', 'https://www.youtube.com/@smkpgrineglasari3934', '2023-09-22', 'fajarsapwebdev19');
 
 -- --------------------------------------------------------
 
@@ -144,13 +173,6 @@ CREATE TABLE `portal` (
   `create_date` date DEFAULT NULL,
   `create_by` varchar(200) COLLATE utf8mb4_general_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `portal`
---
-
-INSERT INTO `portal` (`portal_id`, `foto_portal`, `judul_portal`, `konten_portal`, `create_date`, `create_by`) VALUES
-('1310120752', 'Screenshot (33).png', 'Pengumuman Pelaksanaan ANBK Tahun 2023 SMK Sederajat', '<p>Yth. Kepada :</p><p>Kepala SMA / SMK / SKH Se-Provinsi Banten</p><p>di tempat</p><p><br></p><p>&nbsp; &nbsp; Menindaklanjuti Peraturan Kepala Badan Standar, Kurikulum, dan Asesmen Pendidikan Nomor 015/H/KP/2023 tentang Prosedur Operasional Standar Penyelengaraan Asesmen Nasional Tahun 2023, jadwal pelaksanaan Asesmen Nasional Tahun 2023 sebagai berikut :</p><p>a. 18-20 Agustus 2023, Sinkronisasi Gladih Bersih AN SMA, SMK Sederajat</p><p>b. 21 - 24 Agustus 2023, Gladih Bersih AN SMA, SMK Sederajat</p><p>c. 25 - 27 Agustus 2023, Sinkronisasi Pelaksanaan AN SMA, SMK Sederajat</p><p>d. 28 - 31 Agustus 2023, Pelaksanaan AN SMA, SMK Sederajat</p><p>e. 11 - 24 September 2023, Pelaksanaan Sulingjar (Kepsek Dan Guru) SMA / SMK Sederajat</p><p><br></p><p>&nbsp; &nbsp; Sehubungan Dengan Hal tersebut diatas, kami mohon Kepala Sekolah untuk segera mempersiapkan pelaksanaan Asesmen Nasional Tahun 2023 melalui langkah-langkah sebagai berikut :</p><p>1. Menyiapkan peserta didik yang sudah tersampling dalam laman </p><p><a href=\"https://bioansma.kemdikbud.go.id\" target=\"_blank\">https://bioansma.kemdikbud.go.id</a><a href=\"https://bioansma.kemdikbud.go.id\" target=\"_blank\" style=\"\">&nbsp;,</a></p><p><a href=\"https://bioansmk.kemdikbud.go.id\" target=\"_blank\">https://bioansmk.kemdikbud.go.id</a><a href=\"https://bioansmk.kemdikbud.go.id,\" target=\"_blank\"> ,</a>&nbsp;</p><p><a href=\"https://bioanslb.kemdikbud.go.id\" target=\"_blank\">https://bioanslb.kemdikbud.go.id</a></p><p>2. Memerintahkan proktor untuk melakukan persiapan gladih bersih dan pelaksaan ANBK melalui laman <a href=\"https://anbk.kemdikbud.go.id\" target=\"_blank\">https://anbk.kemdikbud.go.id</a><a href=\"https://anbk.kemdikbud.go.id\" target=\"_blank\"></a></p><p>3. Menyiapkan pengawasan silang antar sekolah dalam pelaksanaan anbk di bawah bimbingan pengawas pembina sekolah dan berkoordinasi dengan Kantor Cabang Dinas Pendidikan Dan Kebudayaan.</p><p>4. Memerintahkan proktor dan peserta didik yang tersampling untuk mengikuti gladih bersih dan pelaksanaan ANBK sesuai jadwal</p><p>5. Menyiapkan Kepala Sekolah dan guru yang terdaftar dalam laman <a href=\"https://dashboardslb.kemdikbud.go.id\" target=\"_blank\">https://dashboardslb.kemdikbud.go.id</a>&nbsp;untuk mengikuti survey lingkungan belajar</p><p>6. Memerintahkan Kepala Sekolah dan guru yang sudah terdaftar untuk mengisi survey lingkungan belajar sesuai jadwal melalui laman <a href=\"https://surveilingkunganbelajar.kemdikbud.go.id\" target=\"_blank\">https://surveilingkunganbelajar.kemdikbud.go.id</a></p><p>&nbsp; &nbsp; Jika sekolah mengalami kesulitan dalam persiapan dan pelaksanaan Asesmen Nasional, silahkan untuk berkoordinasi dengan Tim Teknis ANBK (Helpdesk) Provinsi Banten yang terdapat dalam laman ANBK melalui Layanan Pengaduan.</p><p>&nbsp; &nbsp; Demikian kami sampaikan, atas perhatiannya diucapkan terima kasih</p><p><br></p><p>TTD Lukman, S.Pd.M.Pd</p>', '2023-09-03', 'fajarsapwebdev19');
 
 -- --------------------------------------------------------
 
@@ -255,6 +277,33 @@ INSERT INTO `slider_data` (`id`, `foto_slider`, `judul_slider`, `kontent_slider`
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `ticket`
+--
+
+CREATE TABLE `ticket` (
+  `no_ticket` varchar(250) NOT NULL,
+  `username` varchar(200) NOT NULL,
+  `tanggal` date NOT NULL,
+  `waktu` time NOT NULL,
+  `perihal` varchar(300) NOT NULL,
+  `isi` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
+  `lampiran` text NOT NULL,
+  `status` enum('Menunggu','Proses','Selesai') NOT NULL,
+  `balasan` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `ticket`
+--
+
+INSERT INTO `ticket` (`no_ticket`, `username`, `tanggal`, `waktu`, `perihal`, `isi`, `lampiran`, `status`, `balasan`) VALUES
+('T-ADDFTR-21483230920231635', 'admin123', '2023-09-23', '16:35:25', 'Tambah Fitur', 'khiuhihi', 'T-ADDFTR-21483230920231635.png', 'Menunggu', ''),
+('T-ERR-65488230920231502', 'admin123', '2023-09-23', '15:02:27', 'Kendala', 'Menu Kelola Versi Belum Ada', '', 'Menunggu', ''),
+('T-PRBSLV-46214230920230026', 'admin123', '2023-09-23', '00:26:23', 'Perbaikan', 'web mengalami error ketika mau upload.', '', 'Menunggu', '');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user`
 --
 
@@ -269,6 +318,7 @@ CREATE TABLE `user` (
   `status_akun` enum('Aktif','Tidak Aktif') COLLATE utf8mb4_general_ci DEFAULT NULL,
   `create_date` date DEFAULT NULL,
   `last_login` datetime DEFAULT NULL,
+  `is_developer` int DEFAULT NULL,
   `role` enum('Admin','User') COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -276,8 +326,10 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id_user`, `nama`, `jk`, `tgl_lahir`, `username`, `password`, `email`, `status_akun`, `create_date`, `last_login`, `role`) VALUES
-('BD31D669-F25C-980A-8C54-69D07655FAF2', 'Fajar Saputra', 'Laki-Laki', '2001-12-19', 'fajarsapwebdev19', 'Neglasarikeren12', 'fajarsaputratkj3@gmail.com', 'Aktif', '2022-11-25', '2023-09-08 08:47:35', 'Admin');
+INSERT INTO `user` (`id_user`, `nama`, `jk`, `tgl_lahir`, `username`, `password`, `email`, `status_akun`, `create_date`, `last_login`, `is_developer`, `role`) VALUES
+('3A3FED45-6B4C-D056-0AB7-6F78889BEC34', 'Admin', 'Laki-Laki', '2020-07-16', 'admin123', 'administrator', 'admin@mail.com', 'Aktif', '2023-09-14', '2023-09-25 18:25:59', 0, 'Admin'),
+('BBC4F0A6-7D56-C2DC-02E6-EB11FAC2A174', 'user-1', 'Perempuan', '1955-08-26', 'users', 'testerman', 'test@mail.com', 'Aktif', '2023-09-23', '2023-09-23 00:28:55', 0, 'Admin'),
+('BD31D669-F25C-980A-8C54-69D07655FAF2', 'Fajar Saputra', 'Laki-Laki', '2001-12-19', 'fajarsapwebdev19', 'Neglasarikeren12', 'fajarsaputratkj3@gmail.com', 'Aktif', '2022-11-25', '2023-09-26 12:52:07', 1, 'Admin');
 
 -- --------------------------------------------------------
 
@@ -318,6 +370,12 @@ ALTER TABLE `hub_industri`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `info_ppdb`
+--
+ALTER TABLE `info_ppdb`
+  ADD PRIMARY KEY (`info_id`);
+
+--
 -- Indexes for table `jadwal_ppdb`
 --
 ALTER TABLE `jadwal_ppdb`
@@ -352,6 +410,12 @@ ALTER TABLE `registrasi_anggota`
 --
 ALTER TABLE `slider_data`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `ticket`
+--
+ALTER TABLE `ticket`
+  ADD PRIMARY KEY (`no_ticket`);
 
 --
 -- Indexes for table `user`
