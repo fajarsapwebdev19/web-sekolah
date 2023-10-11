@@ -17,6 +17,15 @@
       <div class="container-fluid">
         <!-- Info boxes -->
         <div class="row">
+          <div class="col-sm-12">
+            <?php
+              if(isset($_SESSION['val']))
+              {
+                echo $_SESSION['val'];
+                unset($_SESSION['val']);
+              }
+            ?>
+          </div>
           <div class="col-12 col-sm-6 col-md-3">
             <div class="info-box">
               <span class="info-box-icon bg-info elevation-1"><i class="fas fa-newspaper"></i></span>
@@ -114,16 +123,47 @@
               <div class="card-body">
                 <div class="row">
                   <div class="col-md-12">
-                    <div class="card bg-light">
-                      <div class="card-header bg-dark">
-                        <h5><em class="fas fa-envelope"></em> Judul</h5>
-                        <h6 class="text-primary">Helpdesk</h6>
-                        <p><em class="fas fa-clock"></em> <b>18.29</b> <em class="fas fa-calendar"></em> <b>10-10-2023</b></p>
-                      </div>
-                      <div class="card-body">
-                        Hello World
-                      </div>
-                    </div>
+                    
+                      <?php
+                          $query = mysqli_query($con, "SELECT * FROM info_hd ORDER BY date DESC, time DESC");
+
+                          if(mysqli_num_rows($query) == 0)
+                          {
+                            ?>
+                              <div class="alert alert-warning bg-warning">
+                                Belum Ada Info !
+                              </div>
+                            <?php
+                          }
+                          else
+                          {
+                            while($info = mysqli_fetch_object($query))
+                            {
+                              ?>
+                                <div class="card bg-light">
+                                    <div class="card-header bg-dark">
+                                      <h5><em class="fas fa-envelope"></em> <?= $info->judul; ?></h5>
+                                      <h6 class="text-primary">Helpdesk (<?= $info->username?>)</h6>
+                                      <p><em class="fas fa-clock"></em> <b><?= (empty($info->time) ? "NULL" : date("H:i", strtotime($info->time))) ?></b> <em class="fas fa-calendar"></em> <b><?= (empty($info->date) ? "NULL" : date("d-m-Y", strtotime($info->date))) ?></b></p>
+                                    </div>
+                                    <div class="card-body">
+                                      <?= $info->message; ?>
+                                      <?php
+                                        if($data_user->is_developer == 1)
+                                        {
+                                          ?>
+                                            <button type="button" data-id="<?= $info->id_info; ?>" class="btn btn-danger delete-info">
+                                              <em class="fas fa-trash"></em> Delete
+                                            </button>
+                                          <?php
+                                        }
+                                      ?>
+                                    </div>
+                                </div>
+                              <?php
+                            }
+                          }
+                      ?>  
                   </div>
                   <!-- /.col -->
                 </div>
@@ -141,3 +181,5 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
+
+  <?php require 'action/info_hd.php'; ?>

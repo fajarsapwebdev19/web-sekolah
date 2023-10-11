@@ -757,8 +757,8 @@ $(".info-ppdb").on("click", ".delete", function(){
       $("#delete-info-ppdb").modal('show');
       $("#confirm_delete_info").html(response);
     }
-  })
-})
+  });
+});
 
 var tiket_user = $('.user-tiket').DataTable({
     serverSide: true,
@@ -806,12 +806,162 @@ var tiket_admin = $('.tiket-view-admin').DataTable({
     serverSide: true,
     processing: true,
     ajax: "server-side/view-tiket-admin.php"
-})
+});
+
+$(".tiket-view-admin").on('click', '.check', function(){
+  var no_ticket = $(this).data("id");
+
+  $.ajax({
+    url: "ajax/action-tiket.php",
+    data: {
+      "method" : "check",
+      "no_ticket" : no_ticket
+    },
+    type: "POST",
+    success:function(respond)
+    {
+      $("#check-ticket").modal("show");
+      $(".check-action").html(respond);
+    }
+  });
+});
 
 $(".reload-tiket").click(function(){
   tiket_admin.ajax.reload(0);
   tiket_user.ajax.reload(0);
+});
+
+$(".delete-info").click(function(){
+  var id = $(this).data("id");
+
+  $.ajax({
+    url: "ajax/data-info-hd.php",
+    data: {
+      id : id
+    },
+    type: "POST",
+    success:function(data){
+      var i = JSON.parse(data);
+      $("#confirm-delete").modal('show');
+      $(".data").val(i.id);
+    }
+  })
 })
+
+$(".version-control").DataTable({
+    serverSide: true,
+    processing: true,
+    ajax: "server-side/version-control.php"
+});
+
+$(".version-control").on("click", '.active', function(){
+  var id = $(this).data("id");
+
+  $.ajax({
+    url : "ajax/get-data-version.php",
+    data: {id:id},
+    type: "POST",
+    success:function(response)
+    {
+      var data = JSON.parse(response);
+      $('#activate-version').modal("show");
+      $('.id').val(data.id);
+      $(".id").hide();
+    }
+  });
+});
+
+$(".version-control").on("click", ".delete", function(){
+  var id = $(this).data("id");
+
+  $.ajax({
+    url: "ajax/get-data-version.php",
+    data: {id:id},
+    type: "POST",
+    success:function(response)
+    {
+      var data = JSON.parse(response);
+      $('#delete-version').modal("show");
+      $('.id').val(data.id);
+      $(".id").hide();
+    }
+  });
+});
+function view_feature(){
+  $("#data-feature").load("ajax/data-version-feature.php");
+}
+
+
+
+$(".version-control").on("click", ".feature", function(){
+  var id = $(this).data("id");
+
+  $.ajax({
+    url: "ajax/data-feature.php",
+    data: {id:id},
+    type: "POST",
+    success:function(response)
+    {
+      $('#detail-version').modal('show');
+      $("#form-detail").html(response);
+      view_feature();
+    }
+  });
+});
+
+$("#form-detail").on("click", ".tambah-feature", function(){
+  var input = $("#form-detail").serialize();
+
+  var jenis = $('.jn').val();
+  var deskripsi = $('.ds').val();
+
+  if(jenis == "")
+  {
+    $("#message").html("<div class='alert alert-danger'>Pilih Salah Satu</div>");
+    $("#message").fadeTo(3000, 5000).slideUp(1200, function() {
+      $("#message").slideUp(600)
+    });
+  }
+  else
+  {
+    if(deskripsi == "")
+    {
+      $("#message").html("<div class='alert alert-danger'>Masukan Deskripsi</div>");
+      $("#message").fadeTo(3000, 5000).slideUp(1200, function() {
+        $("#message").slideUp(600)
+      });
+    }
+    else
+    {
+      $.ajax({
+        url: "ajax/proses-feature.php",
+        data: input,
+        type: 'POST',
+        success:function(response)
+        {
+          if(response == "null")
+          {
+            $("#message").html("<div class='alert alert-danger'>Lengkapi Data</div>");
+            $("#message").fadeTo(3000, 5000).slideUp(1200, function() {
+              $("#message").slideUp(600)
+            });
+          }
+          else if(response == "berhasil")
+          {
+            $("#message").html("<div class='alert alert-success'>Berhasil Tambah Feature</div>");
+            $("#message").fadeTo(3000, 5000).slideUp(1200, function() {
+              $("#message").slideUp(600)
+            });
+            view_feature();
+            $("#form-detail")[0].reset();
+          }
+        }
+      });
+    }
+  } 
+});
+
+
 
 
 // pause in close  modal video view

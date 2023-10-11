@@ -42,7 +42,7 @@ while( $row = mysqli_fetch_object($query) ) {
 	$nestedData=array(); 
   $nestedData[] = $row->no_ticket;
 	$nestedData[] = $row->username;
-	$nestedData[] = $row->tanggal;
+	$nestedData[] = (empty($row->tanggal) ? "NULL" : date("d-m-Y",strtotime($row->tanggal)));
 	$nestedData[] = $row->waktu;
 	$nestedData[] = $row->perihal;
   // status
@@ -59,7 +59,7 @@ while( $row = mysqli_fetch_object($query) ) {
     $status = "<div class='badge badge-success bg-success'>Selesai</div>";
   }
 	$nestedData[] = $status;
-  $nestedData[] = "<button class='btn btn-info btn-sm view' data-id='{$row->no_ticket}'><em class='fas fa-eye'></em></button> <button class='btn btn-danger btn-sm cancel' data-id='{$row->no_ticket}'><em class='fas fa-times'></em></button>";
+  $nestedData[] = "<button class='btn btn-info btn-sm view' data-id='{$row->no_ticket}'><em class='fas fa-eye'></em></button> <button class='btn btn-danger btn-sm cancel' ".($row->status == 'Selesai' ? "disabled" : "")." data-id='{$row->no_ticket}'><em class='fas fa-times'></em></button>";
 
 	$data[] = $nestedData;
 }
@@ -73,6 +73,4 @@ $json_data = array(
     );
 
 echo json_encode($json_data);
-
-sleep(2);
 ?>

@@ -44,7 +44,7 @@
         break;
 
         case 'about';
-        $title = 'Tentang Kami | Admin Panel';
+        $title = 'Profil Sekolah | Admin Panel';
         break;
 
         case 'kontak';
@@ -71,8 +71,12 @@
         $title = 'Tiket | Admin Panel';
         break;
 
-        case 'koperasi';
-        $title = 'Koperasi | Admin Panel';
+        case 'info_hd';
+        $title = 'Informasi Helpdesk | Admin Panel';
+        break;
+
+        case 'version_control';
+        $title = "Kelola Versi | Admin Panel";
         break;
         
         default:

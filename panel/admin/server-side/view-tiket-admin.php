@@ -16,7 +16,7 @@ $columns = array(
 );
 
 
-$sql = "SELECT * FROM ticket";
+$sql = "SELECT * FROM ticket ORDER BY status DESC";
 
 $query = mysqli_query($con, $sql);
 $totalData = mysqli_num_rows($query);
@@ -38,13 +38,26 @@ $data = array();
 $no = 1;
 while( $row = mysqli_fetch_object($query) ) {
 	$nestedData=array(); 
-  	$nestedData[] = $row->no_ticket;
+  $nestedData[] = $row->no_ticket;
 	$nestedData[] = $row->username;
-	$nestedData[] = $row->tanggal;
+	$nestedData[] = (empty($row->tanggal) ? "NULL" : date("d-m-Y",strtotime($row->tanggal)));
 	$nestedData[] = $row->waktu;
 	$nestedData[] = $row->perihal;
-	$nestedData[] = $row->status;
-    $nestedData[] = "<button class='btn btn-info btn-sm update' data-id='{$row->no_ticket}'><em class='fas fa-edit'></em></button> <button class='btn btn-danger btn-sm delete' data-id='{$row->no_ticket}'><em class='fas fa-trash-alt'></em></button>";
+  // status
+  if($row->status == "Menunggu")
+  {
+    $status = "<div class='badge badge-warning'>Menunggu</div>";
+  }
+  else if($row->status == "Proses")
+  {
+    $status = "<div class='badge badge-info'>Proses</div>";
+  }
+  else if($row->status == "Selesai")
+  {
+    $status = "<div class='badge badge-success bg-success'>Selesai</div>";
+  }
+	$nestedData[] = $status;
+    $nestedData[] = "<button class='btn btn-success btn-sm check' ".($row->status == 'Selesai' ? "disabled" : "")." data-id='{$row->no_ticket}'><em class='fas fa-check'></em></button>";
 
 	$data[] = $nestedData;
 }
@@ -58,6 +71,4 @@ $json_data = array(
     );
 
 echo json_encode($json_data);
-
-sleep(2);
 ?>

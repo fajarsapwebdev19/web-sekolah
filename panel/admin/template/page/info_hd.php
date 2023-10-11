@@ -5,16 +5,12 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0 text-dark">Koperasi</h1>
+          <h1 class="m-0 text-dark">Informasi Helpdesk</h1>
         </div><!-- /.col -->
       </div><!-- /.row -->
     </div><!-- /.container-fluid -->
   </div>
   <!-- /.content-header -->
-  <?php
-    $sql = mysqli_query($con, "SELECT * FROM profil_badan_usaha WHERE jenis_profile='Koperasi'");
-    $k = mysqli_fetch_object($sql);
-  ?>
   <section class="content">
     <div class="container-fluid">
       <?php
@@ -24,19 +20,24 @@
           unset($_SESSION['val']);
         }
       ?>
-        <form action="proses/action-profile-badan-usaha.php" method="POST">
+        <form action="proses/action-info-hd.php" method="POST" class="needs-validation" novalidate>
             <div class="card">
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-md-2">
-                            <label>Profil Koperasi</label>
+                        <div class="col-md-2 mb-4">
+                            <label>Judul</label>
                         </div>
-                        <div class="col-md-10">
-                            <input type="hidden" name="id" value="<?= $k->id; ?>">
-                            <textarea name="isi_profile" id="" class="form-control edit" cols="30" rows="50"><?= $k->isi_profile; ?></textarea>
+                        <div class="col-md-10 mb-4">
+                           <input type="text" name="judul" class="form-control" required>
+                        </div>
+                        <div class="col-md-2 mb-4">
+                            <label>Pesan</label>
+                        </div>
+                        <div class="col-md-10 mb-4">
+                            <textarea name="message" id="" class="form-control edit" cols="30" rows="50" required></textarea>
                         </div>
                         <div class="col-md-10 offset-md-2">
-                            <button type="submit" name="ubah_koperasi" class="btn btn-success">Ubah</button>
+                            <button type="submit" name="tambah" class="btn btn-success">Tambah</button>
                         </div>
                     </div>
                 </div>

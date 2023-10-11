@@ -71,6 +71,14 @@
         case 'ticket';
         require 'page/tiket.php';
         break;
+
+        case 'info_hd';
+        require 'page/info_hd.php';
+        break;
+
+        case 'version_control';
+        require 'page/ver-control.php';
+        break;
         
         default:
             require 'page/wrong-page.php';
