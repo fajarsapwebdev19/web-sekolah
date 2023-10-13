@@ -961,6 +961,10 @@ $("#form-detail").on("click", ".tambah-feature", function(){
   } 
 });
 
+("#data-feature").on('click', '.delete', function(){
+  alert("OKE");
+})
+
 
 
 

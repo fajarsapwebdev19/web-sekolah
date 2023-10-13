@@ -4,7 +4,7 @@
 
     $id = $_SESSION['id'];
 ?>
-<table class="table table-sm table-bordered">
+<table class="table table-sm table-bordered feature">
     <thead>
         <tr>
             <th>Jenis</th>
@@ -21,7 +21,7 @@
                     <tr>
                         <td><?= $data->jenis; ?></td>
                         <td><?= $data->deskripsi; ?></td>
-                        <td class="text-center"><button type="button" class="btn btn-sm btn-danger"><em class="fas fa-trash"></em></button></td>
+                        <td class="text-center"><button type="button" data-id="<?= $data->id; ?>" class="btn btn-sm btn-danger delete"><em class="fas fa-trash"></em></button></td>
                     </tr>
                 <?php
             }
