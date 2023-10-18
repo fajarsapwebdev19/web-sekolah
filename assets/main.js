@@ -78,44 +78,6 @@ $(document).ready(function() {
 
     $('#alert').hide();
 
-    $('#form-anggota').on('click', '#regis', function() 
-    {
-        var data = $('#form-anggota').serialize();
-
-        $.ajax({
-            url: 'process/registrasi-anggota.php',
-            data: data,
-            type: 'POST',
-            success:function(response)
-            {
-                if(response == "Berhasil")
-                {
-                    $('.form-control').val(null);
-                    $('.form-check-input').prop('checked', false);
-                    $('#alert').addClass("alert-success text-left bg-success text-white").removeClass("alert-danger bg-danger");
-                    $('.message').html("Berhasil Tambah Anggota Baru");
-                    $("#alert").fadeTo(3000, 5000).slideUp(1200,function(){$("#alert").slideUp(600)});
-                    
-                    $(window).scrollTop(0);
-                    
-                    
-                }else
-                {
-                    $('.form-control').val(null);
-                    $('.form-check-input').prop('checked', false);
-                    $('#alert').show();
-                    $('#alert').addClass("alert-danger text-left bg-danger text-white").removeClass("alert-success bg-success");
-                    $('.message').html("Silahkan Lengkapi Data Terlebih Dahulu");
-                    $("#alert").fadeTo(3000, 5000).slideUp(1200,function(){$("#alert").slideUp(600)});
-
-                    $(window).scrollTop(0);
-                    
-                    
-                }
-            }
-        })
-        
-    })
 });
 
 document.querySelectorAll('.video-container video').forEach(vid => {
