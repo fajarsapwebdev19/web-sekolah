@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Oct 13, 2023 at 06:59 AM
+-- Generation Time: Oct 29, 2023 at 01:38 AM
 -- Server version: 8.0.30
 -- PHP Version: 7.3.33
 
@@ -349,7 +349,7 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`id_user`, `nama`, `jk`, `tgl_lahir`, `username`, `password`, `email`, `status_akun`, `create_date`, `last_login`, `is_developer`, `role`) VALUES
 ('3A3FED45-6B4C-D056-0AB7-6F78889BEC34', 'Admin', 'Laki-Laki', '2020-07-16', 'admin123', 'administrator', 'admin@mail.com', 'Aktif', '2023-09-14', '2023-09-29 13:16:40', 0, 'Admin'),
 ('BBC4F0A6-7D56-C2DC-02E6-EB11FAC2A174', 'user-1', 'Perempuan', '1955-08-26', 'users', 'testerman', 'test@mail.com', 'Aktif', '2023-09-23', '2023-09-23 00:28:55', 0, 'Admin'),
-('BD31D669-F25C-980A-8C54-69D07655FAF2', 'Fajar Saputra', 'Laki-Laki', '2001-12-19', 'fajarsapwebdev19', 'Neglasarikeren12', 'fajarsaputratkj3@gmail.com', 'Aktif', '2022-11-25', '2023-10-11 13:50:12', 1, 'Admin');
+('BD31D669-F25C-980A-8C54-69D07655FAF2', 'Fajar Saputra', 'Laki-Laki', '2001-12-19', 'fajarsapwebdev19', 'Neglasarikeren12', 'fajarsaputratkj3@gmail.com', 'Aktif', '2022-11-25', '2023-10-29 08:00:25', 1, 'Admin');
 
 -- --------------------------------------------------------
 
@@ -368,8 +368,11 @@ CREATE TABLE `version` (
 --
 
 INSERT INTO `version` (`v_id`, `version`, `status`) VALUES
-('243F47D2-43C6-A8AE-8394-85BE987DA637', '2.3.8', 'Y'),
-('B0FE7C2A-FD83-13E4-C7E2-306E22994AEB', '1.3.4', 'N');
+('0A72979C-026E-952B-D92E-DBC13054706A', '1.0.0', 'N'),
+('4012E8C0-7D12-EB4F-6626-05647B2E3FB4', '1.0.6', 'Y'),
+('6C158461-1F5E-FB6F-492C-FB6B1BE5EADB', '1.0.4', 'N'),
+('87627A2E-B0EC-40B4-CC24-0737D155283C', '1.0.1', 'N'),
+('DF5CE666-973A-3F2A-6E64-0EB99678457E', '1.0.2', 'N');
 
 -- --------------------------------------------------------
 
@@ -391,7 +394,21 @@ CREATE TABLE `version_control` (
 --
 
 INSERT INTO `version_control` (`id`, `v_id`, `jenis`, `deskripsi`, `date`, `time`) VALUES
-(1, '243F47D2-43C6-A8AE-8394-85BE987DA637', 'Pembaruan', 'Penambahan Menu Helpdesk Kelola Versi, Informasi Helpdesk, Dan Tiket', '2023-10-11', '13:56:35');
+(1, '0A72979C-026E-952B-D92E-DBC13054706A', 'Pembaruan', 'Penambahan Slide Ke Dalam Web', '2023-10-29', '08:16:07'),
+(2, '0A72979C-026E-952B-D92E-DBC13054706A', 'Pembaruan', 'Tampilan Responsive', '2023-10-29', '08:16:35'),
+(3, '0A72979C-026E-952B-D92E-DBC13054706A', 'Pembaruan', 'Penambahan Slider Team Ke Dalam Web', '2023-10-29', '08:17:00'),
+(4, '87627A2E-B0EC-40B4-CC24-0737D155283C', 'Pembaruan', 'Pembuatan Portal Berita Responsive', '2023-10-29', '08:18:31'),
+(5, '87627A2E-B0EC-40B4-CC24-0737D155283C', 'Pembaruan', 'Penambahan Formulir Pendaftaran Anggota', '2023-10-29', '08:18:43'),
+(6, 'DF5CE666-973A-3F2A-6E64-0EB99678457E', 'Pembaruan', 'Pembuatan Library Galeri Dengan Vanilla Javascript', '2023-10-29', '08:19:16'),
+(7, '6C158461-1F5E-FB6F-492C-FB6B1BE5EADB', 'Pembaruan', 'Pembuatan Panel Website', '2023-10-29', '08:20:17'),
+(8, '6C158461-1F5E-FB6F-492C-FB6B1BE5EADB', 'Pembaruan', 'Penambahan Upload Foto Dan Video', '2023-10-29', '08:20:28'),
+(9, '6C158461-1F5E-FB6F-492C-FB6B1BE5EADB', 'Pembaruan', 'Validasi Batas Max Upload', '2023-10-29', '08:20:38'),
+(10, '6C158461-1F5E-FB6F-492C-FB6B1BE5EADB', 'Pembaruan', 'Konfirmasi Anggota Baru', '2023-10-29', '08:20:47'),
+(11, '4012E8C0-7D12-EB4F-6626-05647B2E3FB4', 'Perbaikan', 'Perbaikan Ukuran Slider Pada Device Smartphone', '2023-10-29', '08:21:24'),
+(12, '4012E8C0-7D12-EB4F-6626-05647B2E3FB4', 'Pembaruan', 'Perubahan Menu Landing', '2023-10-29', '08:21:32'),
+(13, '4012E8C0-7D12-EB4F-6626-05647B2E3FB4', 'Pembaruan', 'Penambahan Menu Active Panel', '2023-10-29', '08:21:55'),
+(14, '4012E8C0-7D12-EB4F-6626-05647B2E3FB4', 'Pembaruan', 'Perubahan Tambah Video Menggunakan Embed Youtube dengan mengambil ID Youtube', '2023-10-29', '08:22:13'),
+(15, '4012E8C0-7D12-EB4F-6626-05647B2E3FB4', 'Pembaruan', ' Perubahan Gambar Berita Menjadi Potrait Ukuran Feed Ig', '2023-10-29', '08:22:22');
 
 -- --------------------------------------------------------
 
@@ -538,7 +555,7 @@ ALTER TABLE `jadwal_ppdb`
 -- AUTO_INCREMENT for table `version_control`
 --
 ALTER TABLE `version_control`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
