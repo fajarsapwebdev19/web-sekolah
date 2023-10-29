@@ -961,8 +961,27 @@ $("#form-detail").on("click", ".tambah-feature", function(){
   } 
 });
 
-("#data-feature").on('click', '.delete', function(){
-  alert("OKE");
+$("#form-detail").on('click', '.delete', function(){
+  var id = $(this).data("id");
+
+  $.ajax({
+    url: "ajax/proses-delete-feature.php",
+    data: {
+      "id" : id
+    },
+    type: "POST",
+    success:function(response)
+    {
+          if(response == "berhasil")
+          {
+            $("#message").html("<div class='alert alert-success'>Berhasil Hapus Data</div>");
+            $("#message").fadeTo(3000, 5000).slideUp(1200, function() {
+              $("#message").slideUp(600)
+            });
+            view_feature();
+          }
+    }
+  })
 })
 
 

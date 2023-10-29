@@ -23,66 +23,41 @@
                     Logs
                 </div>
                 <div class="card-body">
-                    <h4>
-                        Version 1.0.0
-                    </h4>
-                    <p> 
-                        <b class="text-success">[Pembaruan]</b> Penambahan Slide Ke Dalam Web
-                        <br>
-                        => Tampilan Responsive
-                        <br>
-                        => Penambahan Slider Team Ke Dalam Web
-                    </p>
-                    <h4>
-                        Version 1.0.1
-                    </h4>
-                    <p> 
-                        => Pembuatan Portal Berita Responsive
-                        <br>
-                        => Penambahan Formulir Pendaftaran Anggota
-                    </p>
-                    <h4>
-                        Version 1.0.2
-                    </h4>
-                    <p> 
-                        => Pembuatan Library Galeri Dengan Vanilla Javascript
-                    </p>
-                    <h4>
-                        Version 1.0.4
-                    </h4>
-                    <p> 
-                        => Pembuatan Panel Website
-                        <br>
-                        => Penambahan Upload Foto Dan Video
-                        <br>
-                        => Validasi Batas Max Upload
-                        <br>
-                        => Konfirmasi Anggota Baru
-                    </p>
-                    <h4>Version 1.0.6</h4>
-                    <p>
-                      => Perbaikan Ukuran Slider Pada Device Smartphone
-                      <br>
-                      => Perubahan Menu Landing
-                      <br>
-                      => Penambahan Badan Usaha Menu Koperasi, Yayasan Dan Klinik
-                      <br>
-                      => Penambahan Entry Data Jadwal Praktek Klinik
-                      <br>
-                      => Penambahan Menu Active Panel
-                      <br>
-                      => Perubahan Anggota Menjadi Pengurus
-                      <br>
-                      => Penambahan entry NIK pada pendaftaran Anggota Baru (Halaman Landing)
-                      <br>
-                      => Penambahan Tampil Data Anggota Beru Dengan Status Approve, Reject, Dan Menunggu
-                      <br>
-                      => Eksport Data Excel Pengurus Dan Anggota Baru
-                      <br>
-                      => Perubahan Tambah Video Menggunakan Embed Youtube dengan mengambil ID Youtube
-                      <br>
-                      => Perubahan Gambar Berita Menjadi Potrait Ukuran Feed Ig
-                    </p>
+                  <?php
+                    $v = mysqli_query($con, "SELECT * FROM version ORDER BY version ASC");
+                    while($data = mysqli_fetch_assoc($v))
+                    {
+                      ?>
+                          <h4>
+                            Version <?= $data['version']; ?>
+                          </h4>
+
+                          <?php
+                            $v_id = $data['v_id'];
+                            $v_c = mysqli_query($con, "SELECT * FROM version_control WHERE v_id='$v_id'");
+
+                            
+
+                            while($data_vc = mysqli_fetch_object($v_c))
+                            {
+                              if($data_vc->jenis == "Pembaruan")
+                              {
+                                $jenis = "<span class='text-success'>[Pembaruan]</span>";
+                              }
+                              else if($data_vc->jenis == "Perbaikan")
+                              {
+                                $jenis =  "<span class='text-warning'>[Perbaikan]</span>";
+                              }
+                              ?>
+                                <p>
+                                  <?= $jenis." ".$data_vc->deskripsi; ?>
+                                </p>
+                              <?php
+                            }
+                          ?>
+                      <?php
+                    }
+                  ?>
                 </div>
             </div>
             <!-- /.card -->
