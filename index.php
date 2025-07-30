@@ -12,8 +12,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-    <META NAME="description" CONTENT="Website korpri kabupaten tangerang">
-    <META NAME="keywords" CONTENT="Korpri Kabupaten Tangerang, Korps Pegawai Republik Indonesia KABUPATEN TANGERANG">
+    <META NAME="description" CONTENT="SMK PGRI Neglasari">
+    <META NAME="keywords" CONTENT="smkpgrineglasari, smkgrineta, smkpgribandara">
     <META NAME="robot" CONTENT="index,follow">
     <meta name="language" content="indonesia"> 
     <title><?php require 'template/title.php'; echo $title; ?></title>
