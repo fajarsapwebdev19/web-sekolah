@@ -32,9 +32,9 @@
                     <li class="nav-item">
                         <a class="nav-link auto-collapse" href="?page=artikel">Berita</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link auto-collapse" href="https://ppdbsmkpgrineglasari.dev19.my.id">PPDB Online</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link auto-collapse" href="?page=info_ppdb">Informasi PPDB</a>
                     </li>
